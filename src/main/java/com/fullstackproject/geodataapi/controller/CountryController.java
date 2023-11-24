@@ -1,5 +1,6 @@
 package com.fullstackproject.geodataapi.controller;
 
+import com.fullstackproject.geodataapi.dto.CountryStatsDto;
 import com.fullstackproject.geodataapi.dto.FilteredDataDto;
 import com.fullstackproject.geodataapi.model.Country;
 import com.fullstackproject.geodataapi.model.CountryStats;
@@ -32,7 +33,7 @@ public class CountryController {
     }
 
     @GetMapping("/maxGdpPerPopulationRatioStats")
-    public List<CountryStats> getMaxGdpPerPopulationRatioStats() {
+    public List<CountryStatsDto> getMaxGdpPerPopulationRatioStats() {
         return countryService.getMaxGdpPerPopulationRatioStats();
     }
 

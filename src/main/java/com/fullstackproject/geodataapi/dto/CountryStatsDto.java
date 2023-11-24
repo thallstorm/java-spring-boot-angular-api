@@ -1,17 +1,26 @@
-package com.fullstackproject.geodataapi.model;
+package com.fullstackproject.geodataapi.dto;
 
-public class CountryStats {
-    private Integer country_id;
+public class CountryStatsDto {
+    private String name;
+    private String country_code3;
     private Integer year;
     private Integer population;
     private double gdp;
 
-    public Integer getCountry_id() {
-        return country_id;
+    public String getName() {
+        return name;
     }
 
-    public void setCountry_id(Integer country_id) {
-        this.country_id = country_id;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCountry_code3() {
+        return country_code3;
+    }
+
+    public void setCountry_code3(String country_code3) {
+        this.country_code3 = country_code3;
     }
 
     public Integer getYear() {

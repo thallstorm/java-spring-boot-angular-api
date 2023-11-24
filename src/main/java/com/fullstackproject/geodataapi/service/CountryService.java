@@ -1,5 +1,6 @@
 package com.fullstackproject.geodataapi.service;
 
+import com.fullstackproject.geodataapi.dto.CountryStatsDto;
 import com.fullstackproject.geodataapi.mapper.CountryStatsMapper;
 import com.fullstackproject.geodataapi.mapper.LanguageMapper;
 import com.fullstackproject.geodataapi.model.Country;
@@ -30,7 +31,7 @@ public class CountryService {
         return languageMapper.getLanguagesByCountryId(countryId);
     }
 
-    public List<CountryStats> getMaxGdpPerPopulationRatioStats() {
+    public List<CountryStatsDto> getMaxGdpPerPopulationRatioStats() {
         return countryStatsMapper.getMaxGdpPerPopulationRatioStats();
     }
 }
