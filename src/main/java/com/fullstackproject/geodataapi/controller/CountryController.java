@@ -1,6 +1,7 @@
 package com.fullstackproject.geodataapi.controller;
 
 import com.fullstackproject.geodataapi.model.Country;
+import com.fullstackproject.geodataapi.model.CountryStats;
 import com.fullstackproject.geodataapi.model.Language;
 import com.fullstackproject.geodataapi.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,10 @@ public class CountryController {
     @GetMapping("/{countryId}/languages")
     public List<Language> getLanguagesByCountryId(@PathVariable Integer countryId) {
         return countryService.getLanguagesByCountryId(countryId);
+    }
+
+    @GetMapping("/maxGdpPerPopulationRatioStats")
+    public List<CountryStats> getMaxGdpPerPopulationRatioStats() {
+        return countryService.getMaxGdpPerPopulationRatioStats();
     }
 }
