@@ -1,6 +1,7 @@
 package com.fullstackproject.geodataapi.controller;
 
 import com.fullstackproject.geodataapi.model.Country;
+import com.fullstackproject.geodataapi.model.Language;
 import com.fullstackproject.geodataapi.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,5 +22,8 @@ public class CountryController {
         return countryService.getAllCountries();
     }
 
-    // Other endpoints...
+    @GetMapping("/{countryId}/languages")
+    public List<Language> getLanguagesByCountryId(@PathVariable Integer countryId) {
+        return countryService.getLanguagesByCountryId(countryId);
+    }
 }

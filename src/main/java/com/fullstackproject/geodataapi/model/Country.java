@@ -13,13 +13,6 @@ public class Country {
     private double area;
     private String country_code2;
 
-//    public Country() {
-//        this.country_id = country_id;
-//        this.name = name;
-//        this.area = area;
-//        this.country_code2 = country_code2;
-//    }
-
     public Integer getCountry_id() {
             return country_id;
     }
