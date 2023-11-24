@@ -12,6 +12,24 @@ public class Country {
     private String name;
     private double area;
     private String country_code2;
+    private String country_code3;
+    private Integer region_id;
+
+    public String getCountry_code3() {
+        return country_code3;
+    }
+
+    public void setCountry_code3(String country_code3) {
+        this.country_code3 = country_code3;
+    }
+
+    public Integer getRegion_id() {
+        return region_id;
+    }
+
+    public void setRegion_id(Integer region_id) {
+        this.region_id = region_id;
+    }
 
     public Integer getCountry_id() {
             return country_id;

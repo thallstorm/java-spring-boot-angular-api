@@ -1,14 +1,14 @@
 package com.fullstackproject.geodataapi.controller;
 
+import com.fullstackproject.geodataapi.dto.FilteredDataDto;
 import com.fullstackproject.geodataapi.model.Country;
 import com.fullstackproject.geodataapi.model.CountryStats;
 import com.fullstackproject.geodataapi.model.Language;
+import com.fullstackproject.geodataapi.model.Region;
 import com.fullstackproject.geodataapi.service.CountryService;
+import com.fullstackproject.geodataapi.service.GeographyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +17,9 @@ import java.util.List;
 public class CountryController {
     @Autowired
     private CountryService countryService;
+
+    @Autowired
+    private GeographyService geographyService;
 
     @GetMapping
     public List<Country> getAllCountries() {
@@ -31,5 +34,15 @@ public class CountryController {
     @GetMapping("/maxGdpPerPopulationRatioStats")
     public List<CountryStats> getMaxGdpPerPopulationRatioStats() {
         return countryService.getMaxGdpPerPopulationRatioStats();
+    }
+
+    @GetMapping("/filterCountryStats")
+    public List<FilteredDataDto> getFilteredCountryStats(@RequestParam Integer regionId, @RequestParam Integer fromYear, @RequestParam Integer toYear) {
+        return geographyService.getCountryStatsByRegionAndYear(regionId, fromYear, toYear);
+    }
+
+    @GetMapping("/regions")
+    public List<Region> getAllRegions() {
+        return geographyService.getAllRegions();
     }
 }

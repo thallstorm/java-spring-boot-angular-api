@@ -2,19 +2,19 @@ package com.fullstackproject.geodataapi.model;
 
 public class CountryStats {
     private Integer country_id;
-    private String name;
-    private String country_code3;
+//    private String name;
+//    private String country_code3;
     private Integer year;
     private Integer population;
     private double gdp;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public Integer getCountry_id() {
         return country_id;
@@ -24,13 +24,13 @@ public class CountryStats {
         this.country_id = country_id;
     }
 
-    public String getCountry_code3() {
-        return country_code3;
-    }
-
-    public void setCountry_code3(String country_code3) {
-        this.country_code3 = country_code3;
-    }
+//    public String getCountry_code3() {
+//        return country_code3;
+//    }
+//
+//    public void setCountry_code3(String country_code3) {
+//        this.country_code3 = country_code3;
+//    }
 
     public Integer getYear() {
         return year;
