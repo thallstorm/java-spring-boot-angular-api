@@ -5,3 +5,5 @@ After you download the repository
     - Load your DB
     - Build and run the geodataapi app (at this stage you can test each endpoint with Postman, or curl @localhost:8080/api/...)
     - Open a terminal and run $ng serve --open (you need node.js to run angular)
+    - the app works @localhost:4200
+    
